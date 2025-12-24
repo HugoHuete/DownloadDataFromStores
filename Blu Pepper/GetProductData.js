@@ -15,7 +15,8 @@ function getElementsByXpath(path) {
 }
 
 let rows = getElementsByXpath(
-  '/html/body/div[2]/div/main/div/div/div[1]/table/tbody/tr'
+  
+  '/html/body/div[1]/div/main/div/div/div[1]/table/tbody/tr'
 );
 
 let itemSets = [];
@@ -32,6 +33,14 @@ for (let i = 0; i < rows.length; i++) {
       "$",
       ""
     );
+  
+  if (isNaN(price))
+  {
+    price = data.children[2].children[3].textContent.replace(
+      "$",
+      ""
+    );
+  }
 
   itemSets.push([sku, productName, qty, price]);
 }
