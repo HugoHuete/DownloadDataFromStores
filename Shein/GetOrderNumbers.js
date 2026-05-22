@@ -15,7 +15,7 @@
     }
     
     let orders = getElementsByXpath(
-      "/html/body/div[1]/div[1]/div[1]/div[2]/div/div[3]/ul[2]/li"
+      "/html/body/div[1]/div[1]/div[2]/div[2]/div/div[3]/ul[2]/li"
     );
     let ordersArray = [];
     
