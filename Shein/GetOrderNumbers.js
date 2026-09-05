@@ -21,8 +21,8 @@
     
     for (let j = 0; j < orders.length; j++) {
       let orderDate = orders[j].children[0].children[0].textContent;
-      let orderCode = orders[j].children[0].children[1].textContent;
-      ordersArray.push([orderDate, orderCode.split(" ")[2]]);
+      let orderCode = orders[j].children[0].children[1].children[0].textContent;
+      ordersArray.push([orderDate, orderCode]);
     }
     
     console.table(ordersArray);
